@@ -30,17 +30,4 @@ namespace WebApplication9.Controllers
             //return HttpStatusCode.OK;
         }
     }
-
-    public class CustomReportSourceResolver : IReportSourceResolver
-    {
-        public ReportSource Resolve(
-            string reportId,
-            OperationOrigin operationOrigin,
-            IDictionary<string, object> currentParameterValues)
-        {
-            var appPath = Directory.GetCurrentDirectory();
-            var report = new Report1();
-            return new InstanceReportSource { ReportDocument = report };
-        }
-    }
 }

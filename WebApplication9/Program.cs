@@ -15,7 +15,7 @@ builder.Services.TryAddSingleton<IReportServiceConfiguration>(sp => new ReportSe
 	ReportingEngineConfiguration = sp.GetService<IConfiguration>(),
 	HostAppId = "Html5ReportViewerDemo",
 	Storage = new FileStorage(),
-	ReportSourceResolver = new CustomReportSourceResolver()
+	ReportSourceResolver = new TypeReportSourceResolver()
 });
 
 
